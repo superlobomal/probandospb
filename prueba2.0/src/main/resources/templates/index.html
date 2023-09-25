@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sala De Chat</title>
+
+  <!-- Incluir Bootstrap CSS desde un CDN -->
+  <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css"/>
+
+  <!-- Añadir la clase de fondo Bootstrap -->
+  <style>
+    /* Establecer el fondo negro para todo el body */
+    body {
+        background-color: #1005; /* Color negro */
+        color: #fff; /* Color de texto blanco */
+    }
+
+    /* Establecer el fondo azul marino del jumbotron */
+    .jumbotron {
+        background-color: #101f3f; /* Fondo azul marino */
+        color: #fff; /* Color de texto blanco */
+        padding: 50px; /* Agregar un espacio interno al jumbotron */
+        margin-left: 20px; /* Margen izquierdo */
+        margin-right: 20px; /* Margen derecho */
+    }
+
+    /* Establecer el color de texto del jumbotron */
+    .jumbotron .display-4, .jumbotron .lead, .jumbotron p {
+        color: #fff; /* Color de texto blanco */
+    }
+
+    /* Estilo para el contenedor de la imagen y el título de la tarjeta */
+    .card-frame {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Establecer un tamaño fijo para la imagen */
+    .card-img {
+        max-width: 100%; /* Tamaño máximo de la imagen */
+        background-color: transparent; /* Fondo transparente para la imagen */
+    }
+
+    /* Ajustar el tamaño de la tarjeta */
+    .custom-card {
+        width: 80%; /* Ancho de la tarjeta personalizada */
+    }
+  </style>
+
+  <!-- Incluir Bootstrap JavaScript y jQuery desde un CDN -->
+  <script th:src="@{/js/jquery.js}" src="../static/js/jquery.js"></script>
+  <script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-primary-subtle navbar-dark fixed-top" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SalaDeChatDeLoteria</a>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" th:href="@{/}" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sala De Chat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Configuracion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gestor De Usuario</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="container-fluid mt-5">
+  <div class="jumbotron text-center mx-auto" style="width: 98%; margin-top: 90px;">
+    <h1 class="display-1">¡Bienvenido a la Sala de Chat!</h1>
+    <p class="lead">Un lugar para conectarte y compartir.</p>
+    <p style="margin-bottom: 1rem;">Únete a la conversación hoy mismo.</p>
+    <a class="btn btn-primary btn-lg mt-5" href="#" role="button">Comenzar</a>
+  </div>
+</div>
+
+<!-- Tarjeta con imagen a la derecha y texto a la izquierda -->
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem; margin-top: 80px;"> <!-- Agregar margen en la parte superior -->
+        <img th:href=@{"../static/img/imagencar3.jpg} src="../static/img/imagencar3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem; margin-top: 80px;"> <!-- Agregar margen en la parte superior -->
+        <img th:href=@{"../static/img/imagencar3.jpg} src="../static/img/imagencar3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem; margin-top: 80px;"> <!-- Agregar margen en la parte superior -->
+        <img th:href=@{"../static/img/imagencar3.jpg} src="../static/img/imagencar3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem; margin-top: 80px;"> <!-- Agregar margen en la parte superior -->
+        <img th:href=@{"../static/img/imagencar3.jpg} src="../static/img/imagencar3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <nav style="margi:auto" aria-label="Page navigation example mt5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+
+</body>
+</html>
+
